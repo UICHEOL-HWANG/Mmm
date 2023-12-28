@@ -1,0 +1,64 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+  <body>
+    <header id="header">
+      <div class="search-bar">
+        <h1 class="logo"></h1>
+        <a href="#" class="search-ico"></a>
+      </div>
+    </header>
+
+    <main id="container">
+      <section class="liked-con">
+        <div class="inner">
+          <h2>좋아요</h2>
+          <div class="show-btn">
+            <button type="button">플레이리스트</button>
+            <button type="button">곡</button>
+          </div>
+          <!-- 슬라이드-->
+          <!-- https://codesandbox.io/p/sandbox/lvq34j?file=%2Findex.html%3A77%2C3-83%2C11 -->
+          <div #swiperRef="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav>
+      <div class="inner">
+        <ul class="gnb">
+          <li>
+            <a href="#">
+              <i class="hidden">home</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="hidden">liked</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="hidden">explore</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="hidden">my-info</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+{% endblock content %}

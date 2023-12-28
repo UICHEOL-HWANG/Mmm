@@ -1,0 +1,351 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<body>
+    <!-- header -->
+    <header id="header">
+      <div class="search-bar">
+        <h1 class="logo">Mmm!</h1>
+        <button type="button" class="search-ico">search</button>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main id="container">
+      <div class="swiper filter">
+        <div class="swiper-wrapper">
+          <!-- 필터링 내용 -->
+          <div class="swiper-slide filter-mood"><button class="btn-filter">Slide 1</button></div>
+          <div class="swiper-slide filter-mood"><button class="btn-filter">Slide 2</button></div>
+          <div class="swiper-slide filter-mood"><button class="btn-filter">Slide 3</button></div>
+          <div class="swiper-slide filter-mood"><button class="btn-filter">Slide 4</button></div>
+          <div class="swiper-slide filter-mood"><button class="btn-filter">Slide 5</button></div>
+        </div>
+      </div>
+
+      <!-- 커스텀(필터링 내용)한 플레이 추천 -->
+      <section class="random-custom-play">
+        <div class="inner">
+          <div class="custom-title">
+            <strong>현재 시간과 상황(커스텀 플레이 테마)</strong>
+            <!-- 플리제목 -->
+            <h2>불타는 금요일 저녁, 자유의 플리</h2>
+          </div>
+        </div>
+
+        <div class="swiper custom-playlist">
+          <div class="swiper-wrapper">
+            <!-- 추천 플리 -->
+            <div class="swiper-slide random-playlist">
+              <a href="#">
+                <!-- 랜덤 플리 이미지 -->
+                <figure><img src="" alt="" /></figure>
+                <div class="random-playlist-title">
+                  <!-- 플리 타이틀 -->
+                  <h3>불금에 시원하게 드라이브 어때?</h3>
+                  <!-- 트랙 개수 -->
+                  <p>30개 트랙</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide random-playlist">
+              <a href="#">
+                <figure><img src="" alt="" /></figure>
+                <div class="random-playlist-title">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide random-playlist">
+              <a href="#">
+                <figure><img src="" alt="" /></figure>
+                <div class="random-playlist-title">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide random-playlist">
+              <a href="#">
+                <figure><img src="" alt="" /></figure>
+                <div class="random-playlist-title">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide random-playlist">
+              <a href="#">
+                <figure><img src="" alt="" /></figure>
+                <div class="random-playlist-title">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide random-playlist">
+              <a href="#">
+                <figure><img src="" alt="" /></figure>
+                <div class="random-playlist-title">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 페이지네이션 -->
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- 해당 플리에 들어있는 곡들 -->
+        <div class="inner">
+          <!-- 트랙 개수 -->
+          <p>30개 트랙</p>
+          <div class="random-playlist-music">
+            <ul class="random-playlist-chart">
+              <li>
+                <a href="#">
+                  <!-- 앨범 재킷 -->
+                  <figure><img src="" alt="" /></figure>
+
+                  <!-- 플레이 곡들 -->
+                  <div class="random-playlist-chart-title">
+                    <!-- 노래 제목 -->
+                    <strong>보랏빛 밤</strong>
+                    <div class="random-playlist-chart-text">
+                      <!-- 가수 -->
+                      <p>선미</p>
+                      <!-- 노래 길이 -->
+                      <p>3:27</p>
+                    </div>
+                  </div>
+                </a>
+                <button class="btn-exp" type="button">설명</button>
+              </li>
+              <li>
+                <a href="#">
+                  <!-- 앨범 재킷 -->
+                  <figure><img src="" alt="" /></figure>
+                  <div class="random-playlist-chart-title">
+                    <!-- 노래 제목 -->
+                    <strong></strong>
+                    <div class="random-playlist-chart-text">
+                      <!-- 가수 -->
+                      <p></p>
+                      <!-- 노래 길이 -->
+                      <p></p>
+                    </div>
+                  </div>
+                </a>
+                <button class="btn-exp" type="button">더 보기</button>
+              </li>
+              <li>
+                <a href="#">
+                  <!-- 앨범 재킷 -->
+                  <figure><img src="" alt="" /></figure>
+                  <div class="random-playlist-chart-title">
+                    <!-- 노래 제목 -->
+                    <strong></strong>
+                    <div class="random-playlist-chart-text">
+                      <!-- 가수 -->
+                      <p></p>
+                      <!-- 노래 길이 -->
+                      <p></p>
+                    </div>
+                  </div>
+                </a>
+                <button class="btn-exp" type="button">더 보기</button>
+              </li>
+              <li>
+                <a href="#">
+                  <!-- 앨범 재킷 -->
+                  <figure><img src="" alt="" /></figure>
+                  <div class="random-playlist-chart-title">
+                    <!-- 노래 제목 -->
+                    <strong></strong>
+                    <div class="random-playlist-chart-text">
+                      <!-- 가수 -->
+                      <p></p>
+                      <!-- 노래 길이 -->
+                      <p></p>
+                    </div>
+                  </div>
+                </a>
+                <button class="btn-exp" type="button">더 보기</button>
+              </li>
+              <li>
+                <a href="#">
+                  <!-- 앨범 재킷 -->
+                  <figure><img src="" alt="" /></figure>
+                  <div class="random-playlist-chart-title">
+                    <!-- 노래 제목 -->
+                    <strong></strong>
+                    <div class="random-playlist-chart-text">
+                      <!-- 가수 -->
+                      <p></p>
+                      <!-- 노래 길이 -->
+                      <p></p>
+                    </div>
+                  </div>
+                </a>
+                <button class="btn-exp" type="button">더 보기</button>
+              </li>
+            </ul>
+            <button class="btn-music" type="button">더 보기</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 테마별 추천(테마플리2) -->
+      <section class="random-theme">
+        <div class="inner">
+          <!-- 랜덤 테마 앨범 -->
+          <div class="random-theme-album">
+            <div class="random-theme-img">
+              <!-- 앨범 재킷 사진 -->
+              <figure><img src="" alt="" /></figure>
+            </div>
+            <div class="random-theme-title">
+              <strong>랜덤 플레이 테마</strong>
+              <!-- 플리 제목 -->
+              <h3>기타 소리가 상쾌한 인디 밴드 음악</h3>
+              <!-- 가수/트랙 -->
+              <p>실리카겔, 새소년 외 5 · 51개 트랙</p>
+            </div>
+            <button class="like-btn" type="button">like</button>
+          </div>
+
+          <!-- 랜덤 테마 앨범에 해당하는 곡들 -->
+          <ul class="random-theme-chart">
+            <li>
+              <a href="#">
+                <!-- 앨범 재킷 -->
+                <figure><img src="" alt="" /></figure>
+
+                <!-- 플레이 곡 -->
+                <div class="random-playlist-chart-title">
+                  <!-- 노래 제목 -->
+                  <strong>보랏빛 밤</strong>
+                  <div class="random-playlist-chart-text">
+                    <!-- 가수 -->
+                    <p>선미</p>
+                    <!-- 노래 길이 -->
+                    <p>3:27</p>
+                  </div>
+                </div>
+              </a>
+              <button class="btn-exp" type="button">설명</button>
+            </li>
+            <li>
+              <a href="#">
+                <!-- 앨범 재킷 -->
+                <figure><img src="" alt="" /></figure>
+                <div class="random-playlist-chart-title">
+                  <!-- 노래 제목 -->
+                  <strong></strong>
+                  <div class="random-playlist-chart-text">
+                    <!-- 가수 -->
+                    <p></p>
+                    <!-- 노래 길이 -->
+                    <p></p>
+                  </div>
+                </div>
+              </a>
+              <button class="btn-exp" type="button">더 보기</button>
+            </li>
+            <li>
+              <a href="#">
+                <!-- 앨범 재킷 -->
+                <figure><img src="" alt="" /></figure>
+                <div class="random-playlist-chart-title">
+                  <!-- 노래 제목 -->
+                  <strong></strong>
+                  <div class="random-playlist-chart-text">
+                    <!-- 가수 -->
+                    <p></p>
+                    <!-- 노래 길이 -->
+                    <p></p>
+                  </div>
+                </div>
+              </a>
+              <button class="btn-exp" type="button">더 보기</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- another 추천 -->
+      <section class="random-another">
+        <div class="inner">
+          <h2>다른 플리 테마 추천</h2>
+
+          <!-- swiper -->
+          <div class="swiper another-playlist">
+            <div class="swiper-wrapper">
+              <!-- 다른 플리 테마 추천 이미지 -->
+              <div class="swiper-slide another-playlist-recommend">
+                <a href="#">
+                  <!-- 플리 테마 이미지 -->
+                  <figure><img src="" alt="" /></figure>
+                </a>
+              </div>
+              <div class="swiper-slide another-playlist-recommend">
+                <a href="#">
+                  <figure><img src="" alt="" /></figure>
+                </a>
+              </div>
+              <div class="swiper-slide another-playlist-recommend">
+                <a href="#">
+                  <figure><img src="" alt="" /></figure>
+                </a>
+              </div>
+              <div class="swiper-slide another-playlist-recommend">
+                <a href="#">
+                  <figure><img src="" alt="" /></figure>
+                </a>
+              </div>
+              <div class="swiper-slide another-playlist-recommend">
+                <a href="#">
+                  <figure><img src="" alt="" /></figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- gnb -->
+    <nav>
+      <ul class="gnb">
+        <li>
+          <a href="#">
+            <i class="hidden">home</i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="hidden">liked</i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="hidden">explore</i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="hidden">my-info</i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+  </body>
+{% endblock content %}

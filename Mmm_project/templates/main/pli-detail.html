@@ -1,0 +1,89 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+  <body>
+    <header id="header">
+      <!-- 상단 로고 + 서치 아이콘 -->
+      <div class="search-bar-detail">
+        <!-- 뒤로 이동 -->
+        <a href="#" class="back"><i class="hidden">back</i></a>
+        <div class="search-bar-right">
+          <a href="#" class="search-ico"><i class="hidden">search-ico</i></a>
+          <button class="like-btn" type="button">
+            <i class="hidden">like</i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="container">
+      <div class="inner">
+        <!-- 플리 상세 상단 con -->
+        <div class="pli-info">
+          <figure>
+            <img src="./img/pli-detail-img.jpg" alt="플리 이미지" />
+          </figure>
+          <div class="info-wrap">
+            <p>불타는 금요일 저녁, 자유의 플리</p>
+            <strong>불금에 시원하게 드라이브 어때?</strong>
+          </div>
+          <a href="play.html" class="play-btn"
+            ><i class="hidden">버튼 누르면 플레이</i></a
+          >
+        </div>
+        <!-- 플리 상세 하단 con- 플리에 들어가는 노래들 리스트가 들어감-->
+        <div class="pli-con">
+          <div class="up-down-bar"></div>
+          <div class="pli-num">30개 트랙</div>
+          <ul class="pli-list">
+            <li>
+              <a href="#">
+                <!-- 앨범 재킷 -->
+                <figure><img src="" alt="" /></figure>
+                <div class="random-playlist-chart-title">
+                  <!-- 노래 제목 -->
+                  <strong>보랏빛 밤</strong>
+                  <div class="random-playlist-chart-text">
+                    <!-- 가수 -->
+                    <p>선미</p>
+                    <!-- 노래 길이 -->
+                    <p>3:27</p>
+                  </div>
+                </div>
+              </a>
+              <button class="btn-exp" type="button">설명</button>
+            </li>
+          </ul>
+        </div>
+        <nav>
+          <ul class="gnb">
+            <li>
+              <a href="#">
+                <i class="hidden">home</i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="hidden">liked</i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="hidden">explore</i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="hidden">my-info</i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>
+
+{% endblock content %}

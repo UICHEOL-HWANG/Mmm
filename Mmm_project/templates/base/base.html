@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>{% block title %}Mmm!{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+    <!-- 슬라이드용 JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+
+    <style>
+      /* 이미지 넣는 공간 임시 css // 디자인 들어갈 때 지움 */
+      figure {
+        background: #f00;
+        width: 150px;
+        height: 100px;
+      }
+    </style>
+  </head>
+
+<body>
+    {% block content %}{% endblock content %}
+</body>

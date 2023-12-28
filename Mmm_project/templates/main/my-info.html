@@ -1,0 +1,106 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<body>
+    <header id="header">
+      <div class="search-bar">
+        <h1 class="logo"></h1>
+        <a href="#" class="search-ico"></a>
+      </div>
+    </header>
+
+    <main id="container">
+      <section class="user-settings">
+        <div class="inner">
+          <h2><i class="hidden">user-settings</i></h2>
+          <!-- 사용자  정보 관리 영역-->
+          <div class="user-info-edit">
+            <!-- # : 전부 같은 사용자 정보 수정페이지로 이동 -->
+            <strong class="user-img">
+              <a href="#"><img src="" alt="사용자 프로필 이미지" /></a>
+            </strong>
+            <p class="user-name"><a href="#">임시아이디</a></p>
+            <p class="user-email"><a href="#">Loremipsum@gmail.com</a></p>
+          </div>
+          <!-- # : 로그아웃 확인페이지로 이동 -->
+          <a href="#">로그아웃</a>
+        </div>
+      </section>
+
+      <section class="notice-wrap">
+        <div class="inner">
+          <h2><i class="hidden">notice-wrap</i></h2>
+          <p class="notice1">공지/이벤트</p>
+          <p class="notice2">고객센터</p>
+        </div>
+      </section>
+
+      <section class="record">
+        <div class="inner">
+          <h2><i class="hidden">record</i></h2>
+          <div class="record-title">
+            <strong>기록</strong>
+            <a href="#" class="more">전체보기</a>
+          </div>
+          <!-- 슬라이드-->
+          <!-- https://codesandbox.io/p/sandbox/lvq34j?file=%2Findex.html%3A77%2C3-83%2C11 -->
+          <div #swiperRef="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="liked">
+        <div class="inner">
+          <h2><i class="hidden">liked</i></h2>
+          <div class="liked-title">
+            <strong>좋아요</strong>
+            <a href="#" class="more">전체보기</a>
+          </div>
+          <!-- 슬라이드-->
+          <!-- https://codesandbox.io/p/sandbox/lvq34j?file=%2Findex.html%3A77%2C3-83%2C11 -->
+          <div #swiperRef="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav>
+      <div class="inner">
+        <ul class="gnb">
+          <li>
+            <a href="#">
+              <i class="hidden">home</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="hidden">liked</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="hidden">explore</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="hidden">my-info</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+{% endblock content %}

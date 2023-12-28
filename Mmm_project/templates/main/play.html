@@ -1,0 +1,135 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+  <body>
+    <header id="header">
+      <!-- 상단 로고 + 서치 아이콘 -->
+      <div class="search-bar-play">
+        <!-- 뒤로 이동 -->
+        <a href="#" class="back"><i class="hidden">back</i></a>
+        <strong class="pli-title">불금에 시원하게 드라이브...</strong>
+        <a href="#" class="search-ico"><i class="hidden">search-ico</i></a>
+      </div>
+    </header>
+    <main id="container">
+      <!-- 음악 재생화면 - 앨범 슬라이드-->
+      <div class="swiper-container pli-list1">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide"><img src="" alt="보라빛 밤 앨범 커버" /></li>
+          <li class="swiper-slide"><img src="" alt="음악2 앨범 커버" /></li>
+          <li class="swiper-slide"><img src="" alt="음악3 앨범 커버" /></li>
+          <li class="swiper-slide"><img src="" alt="음악4 앨범 커버" /></li>
+        </ul>
+      </div>
+      <!-- 음악 재생화면 - 텍스트 슬라이드-->
+      <div class="swiper-container pli-list2">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <!-- 곡 명 -->
+            <strong>보라빛 밤</strong>
+            <!-- 가수명 -->
+            <p>선미</p>
+          </li>
+          <li class="swiper-slide">
+            <!-- 곡 명 -->
+            <strong>음악2</strong>
+            <!-- 가수명 -->
+            <p>음악2 가수</p>
+          </li>
+          <li class="swiper-slide">
+            <!-- 곡 명 -->
+            <strong>음악3</strong>
+            <!-- 가수명 -->
+            <p>음악3 가수</p>
+          </li>
+          <li class="swiper-slide">
+            <!-- 곡 명 -->
+            <strong>음악4</strong>
+            <!-- 가수명 -->
+            <p>음악4 가수</p>
+          </li>
+        </ul>
+      </div>
+      <button class="like-btn" type="button">
+        <i class="hidden">like</i>
+      </button>
+
+      <div class="play-control">
+        <div class="inner">
+          <div class="play-control-top">
+            <div class="play-progress">
+              <div class="play-progress-bg"></div>
+              <div class="play-bar"></div>
+            </div>
+            <div class="play-time">
+              <p>0:00</p>
+              <p>3:27</p>
+            </div>
+          </div>
+          <div class="play-control-bottom">
+            <button class="change" type="button">
+              <i class="hidden">change</i>
+            </button>
+            <button class="prev" type="button">prev</button>
+            <button class="play" type="button">play</button>
+            <button class="next" type="button">next</button>
+            <button class="repeat" type="button">
+              <i class="hidden">repeat</i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 플리 상세 하단 con- 플레이 상태에서는 시안과 같이 내려가있는 상태 ,플리에 들어가는 노래들 리스트가 들어감-->
+      <div class="pli-con">
+        <div class="up-down-bar"></div>
+        <div class="pli-num">30개 트랙</div>
+        <ul class="pli-list">
+          <li>
+            <a href="#">
+              <!-- 앨범 재킷 -->
+              <figure><img src="" alt="" /></figure>
+              <div class="random-playlist-chart-title">
+                <!-- 노래 제목 -->
+                <strong>보랏빛 밤</strong>
+                <div class="random-playlist-chart-text">
+                  <!-- 가수 -->
+                  <p>선미</p>
+                  <!-- 노래 길이 -->
+                  <p>3:27</p>
+                </div>
+              </div>
+            </a>
+            <button class="btn-exp" type="button">설명</button>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="gnb">
+          <li>
+            <a href="#">
+              <i class="hidden">home</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="hidden">liked</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="hidden">explore</i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="hidden">my-info</i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+{% endblock content %}

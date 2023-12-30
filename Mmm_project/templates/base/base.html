@@ -7,6 +7,7 @@
     
     <title>{% block title %}Mmm!{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
     <!-- 슬라이드용 JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -23,5 +24,7 @@
   </head>
 
 <body>
+    {% block header %}{% endblock header %}
     {% block content %}{% endblock content %}
+    {% block endjs %}{% endblock endjs %}
 </body>

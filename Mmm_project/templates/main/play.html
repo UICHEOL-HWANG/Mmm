@@ -1,4 +1,4 @@
-{% extends 'base/base.html' %}
+{% extends 'base/base_with_navbar.html' %}
 
 {% load static %}
 
@@ -106,30 +106,33 @@
         </ul>
       </div>
       <nav>
-        <ul class="gnb">
-          <li>
-            <a href="#">
-              <i class="hidden">home</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="hidden">liked</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="hidden">explore</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="hidden">my-info</i>
-            </a>
-          </li>
-        </ul>
+        <div class="inner">
+          <ul class="gnb">
+            <li>
+              <a href="./index.html">
+                <i class="hidden">home</i>
+              </a>
+            </li>
+            <li>
+              <a href="./my-liked-songs.html">
+                <i class="hidden">liked</i>
+              </a>
+            </li>
+            <li>
+              <a href="./explore.html">
+                <i class="hidden">explore</i>
+              </a>
+            </li>
+            <li>
+              <a href="./my-info.html">
+                <i class="hidden">my-info</i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </main>
     <footer id="footer"></footer>
   </body>
-{% endblock content %}
+</html>
+{% endblock content  %}

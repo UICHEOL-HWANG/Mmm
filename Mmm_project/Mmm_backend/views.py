@@ -1,29 +1,36 @@
+from typing import Any
+from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views.generic import * 
 from django.db import models
 from . models import * 
-# import datetime
+import datetime
 
-# from Mmm_backend.models import * 
-# from datetime import datetime
+from Mmm_backend.models import * 
+from datetime import datetime
 
-# # 페이지네이션
-# from django.core.paginator import Paginator
-# import requests
+# 페이지네이션
+from django.core.paginator import Paginator
+import requests
 
-# # api 모듈 
-# from . use_api import * 
+# api 모듈 
+from . use_api import * 
 # from . api_key import * 
-# import base64
+import base64
 
-# # forms.py 
-# # from Mmm_backend.forms import * 
-# from django.urls import reverse,reverse_lazy
+from django.shortcuts import get_object_or_404
+
+# forms.py 
+# from Mmm_backend.forms import * 
+from django.urls import reverse,reverse_lazy
 
 
 def index(request):
     songs = Song.objects.all()  # 모든 Song 객체를 쿼리
     return render(request, "main/index.html", {'songs': songs})
+
+def Splash(request):
+    return render(request,'main/splash.html')
 
 
 # class MusicList(ListView):
@@ -37,14 +44,32 @@ def index(request):
 #         return Song.objects.select_related('album').all()
 
 
-# # 프로필 
-# class ProfileVeiw(DetailView):
-#     model = User 
-#     template_name = "main/profile.html"
-#     pk_url_kwarg = "user_id"
+# 프로필 
+class ProfileView(DetailView):
+    model = User 
+    template_name = "main/my-info.html"
+    pk_url_kwarg = "user_id"
     
-#     context_object_name = "profile_user"
+    context_object_name = "profile_user"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.get_object()
+        context['liked_songs'] = Liked_Song.objects.filter(user=user).select_related('song')
+        
+        return context
+
+class UserLikedSongsView(DetailView):
+    model = User
+    template_name = 'main/my-liked-songs.html'
+    context_object_name = 'user'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.get_object()
+        context['liked_songs'] = Liked_Song.objects.filter(user=user).select_related('song')
+        return context
     
+
 # # 프로필 변경 
 
 # class ProfileUpdateView(UpdateView):

@@ -1,4 +1,4 @@
-{% extends 'base/base.html' %}
+{% extends 'base/base_with_navbar.html' %}
 
 {% load static %}
 
@@ -15,10 +15,10 @@
       <div class="random-theme">
         <!-- 랜덤으로 들어오는 노래의 앨범 커버가 랜덤으로 들어감 총 4장-->
         <div class="ran theme-bg">
-          <figure><img src="{% static 'img/random-img.jpg' %}" alt="플리 이미지1" /></figure>
-          <figure><img src="{% static 'img/random-img.jpg' %}" alt="플리 이미지2" /></figure>
-          <figure><img src="{% static 'img/random-img.jpg' %}" alt="플리 이미지3" /></figure>
-          <figure><img src="{% static 'img/random-img.jpg' %}" alt="플리 이미지4" /></figure>
+          <figure><img src="./img/random-img.jpg" alt="플리 이미지1" /></figure>
+          <figure><img src="./img/random-img.jpg" alt="플리 이미지2" /></figure>
+          <figure><img src="./img/random-img.jpg" alt="플리 이미지3" /></figure>
+          <figure><img src="./img/random-img.jpg" alt="플리 이미지4" /></figure>
         </div>
         <div class="ran theme-txt">
           <!-- 플리 상세로 이동 -->
@@ -31,9 +31,7 @@
           </a>
         </div>
         <!-- play버튼 누르면 해당 플리가 플레이됨.(플레이 페이지로 이동) -->
-        <a href="play.html" class="play-btn"
-          ><i class="hidden">버튼 누르면 플레이</i></a
-        >
+        <a href="play.html" class="play-btn"><i class="hidden">버튼 누르면 플레이</i></a>
 
         <!-- 하트버튼 누르면 해당 플리의 정보가 'my-liked-songs.html'의 플레이리스트 항목으로 들어감
         change 버튼 누르면 플레이리스트 항목 중 랜덤으로 변경-->
@@ -46,32 +44,8 @@
           </button>
         </div>
       </div>
-      <nav>
-        <ul class="gnb">
-          <li>
-            <a href="#">
-              <i class="hidden">home</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="hidden">liked</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="hidden">explore</i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="hidden">my-info</i>
-            </a>
-          </li>
-        </ul>
-      </nav>
     </main>
-    <footer id="footer"></footer>
+   
   </body>
 </html>
 {% endblock content %}

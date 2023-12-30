@@ -1,0 +1,32 @@
+{% extends "base/base.html" %} 
+
+{% load static %} 
+
+{% block header %}
+<nav>
+  <div class="inner">
+    <ul class="gnb">
+      <li>
+        <a href="./index.html">
+          <i class="hidden">home</i>
+        </a>
+      </li>
+      <li>
+        <a href="./my-liked-songs.html">
+          <i class="hidden">liked</i>
+        </a>
+      </li>
+      <li>
+        <a href="./explore.html">
+          <i class="hidden">explore</i>
+        </a>
+      </li>
+      <li>
+        <a href="./my-info.html">
+          <i class="hidden">my-info</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock header %}
